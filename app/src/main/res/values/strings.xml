@@ -3,8 +3,6 @@
     <string name="dorm_ask_text">Please select a dorm plan</string>
     <string name="meal_ask_text">Please select a meal plan</string>
 
-
-
     <string-array name="dorm_plans">
         <item>Allen Hall</item>
         <item>Pike Hall</item>
