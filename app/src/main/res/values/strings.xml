@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Dorm And Meal Plan - EML</string>
+    <string name="dorm_ask_text">Please select a dorm plan</string>
+    <string name="meal_ask_text">Please select a meal plan</string>
+
+    <string-array name="dorm_plans">
+        <item>Allen Hall</item>
+        <item>Pike Hall</item>
+        <item>Farthing Hall</item>
+        <item>University Suites</item>
+    </string-array>
+
+    <string-array name="meal_plans">
+        <item>7 meals per week</item>
+        <item>14 meals per week</item>
+        <item>Unlimited meals per week</item>
+    </string-array>
+
+</resources>
