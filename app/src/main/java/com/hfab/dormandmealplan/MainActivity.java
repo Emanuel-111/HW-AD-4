@@ -8,24 +8,31 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * This MainActivity class is used to caclualte the total of
+ * a meal plan and a dorm plan. Once the user inputs the two plans,
+ * the program will calculate the total based on the plans they have chosen.
+ */
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnCalculate;
-    private Spinner spDormPlan;
-    private Spinner spMealPlan;
-    private TextView totalCostDisplay;
+    private Button btnCalculate; // Button Calculate
+    private Spinner spDormPlan; // Spinner Dorm Plan
+    private Spinner spMealPlan; // Spinner Meal Plan
+    private TextView totalCostDisplay; // TextView of the total
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Grab each fields information
         btnCalculate = findViewById(R.id.btn_calculate);
         spDormPlan = findViewById(R.id.dorm_spinner);
         spMealPlan = findViewById(R.id.meal_spinner);
         totalCostDisplay = findViewById(R.id.total_cost_text);
 
 
+        // The button will calculate the total and display the total
         btnCalculate.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -35,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 double mealTotal = 0;
                 double total = 0;
 
+                // If a specific meal and dorm plan are picked, the total will be calculated
                 if (spDormPlan.getSelectedItem().equals("Allen Hall"))
                     dormTotal += 1800;
 
@@ -50,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 else
                     dormTotal += 0;
 
+
+
                 if (spMealPlan.getSelectedItem().equals("7 meals per week"))
                     mealTotal += 600;
 
@@ -62,8 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 else
                     mealTotal += 0;
 
+                // Adds the total
                 total = mealTotal + dormTotal;
 
+                // Displays the total to the user
                 totalCostDisplay.setText(String.format("Cost: $%.2f", total));
 
             }
